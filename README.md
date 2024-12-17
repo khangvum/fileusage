@@ -37,15 +37,3 @@
         folder
                 starting folder or current folder if not specified
 </pre>
-
-###
-
-<h2 align="left">Languages</h2>
-
-###
-
-<div align="left">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" height="40" alt="cplusplus logo"  />
-  <img width="12" />
-  <p>100%</p>
-</div>
