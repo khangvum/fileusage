@@ -1,9 +1,9 @@
 #pragma once
 /*! \file	    fileusage.hpp
-	\brief	    <fileusage> header file
-	\author	    Manh Khang Vu
-	\date	    2024-12-03
-	\copyright	Manh Khang Vu
+    \brief	    <fileusage> header file
+    \author	    Manh Khang Vu
+    \date	    2024-12-03
+    \copyright	    Manh Khang Vu
 
   =============================================================
   Revision History
