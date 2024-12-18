@@ -11,7 +11,7 @@
 
   Version 2024.12.03
 	  Directory hierarchy cleanup
-	  - Separated system and helper utilities
+	  Separated system and helper utilities
 
   Version 2024.11.05
 	  Classes cleanup
