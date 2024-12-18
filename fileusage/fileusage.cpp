@@ -2,7 +2,7 @@
     \brief	    File usage listing
     \author	    Manh Khang Vu
     \date	    2024-12-03
-    \copyright	Manh Khang Vu
+    \copyright	    Manh Khang Vu
 
   =============================================================
   Revision History
