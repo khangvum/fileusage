@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\0. utilities">
+      <UniqueIdentifier>{d8891aa3-2ef3-4d8e-b344-d67321c18403}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\1. arguments">
+      <UniqueIdentifier>{e4316578-3968-42b3-bc7f-b4dc02e6637c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\2. scan">
+      <UniqueIdentifier>{1f322b96-94c7-4a95-86df-3d7dcacad347}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\3. report">
+      <UniqueIdentifier>{26ee227b-e035-46c8-9f03-a1b3083a95a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\0. utilities">
+      <UniqueIdentifier>{3e0aad70-b430-4192-806d-a7dfadf6267f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\1. arguments">
+      <UniqueIdentifier>{9516b5b5-80c5-45a7-8328-d95c2960801b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\2. scan">
+      <UniqueIdentifier>{2802d358-ac39-4ace-918f-ad83175ac801}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\3. report">
+      <UniqueIdentifier>{db21cd43-d0e2-4df5-92d7-7ba33c0a97aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\fileusage">
+      <UniqueIdentifier>{3d074b4d-0344-4e09-802a-f6c4a0daa73e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="fileusage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\0. utilities\src\system.cpp">
+      <Filter>Source Files\0. utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="..\0. utilities\src\helper.cpp">
+      <Filter>Source Files\0. utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="..\1. arguments\src\args.cpp">
+      <Filter>Source Files\1. arguments</Filter>
+    </ClCompile>
+    <ClCompile Include="..\1. arguments\src\Argument.cpp">
+      <Filter>Source Files\1. arguments</Filter>
+    </ClCompile>
+    <ClCompile Include="..\2. scan\src\Extension.cpp">
+      <Filter>Source Files\2. scan</Filter>
+    </ClCompile>
+    <ClCompile Include="..\2. scan\src\ExtensionInfo.cpp">
+      <Filter>Source Files\2. scan</Filter>
+    </ClCompile>
+    <ClCompile Include="..\2. scan\src\scan_directory.cpp">
+      <Filter>Source Files\2. scan</Filter>
+    </ClCompile>
+    <ClCompile Include="..\2. scan\src\ThreadPool.cpp">
+      <Filter>Source Files\2. scan</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3. report\src\benchmark.cpp">
+      <Filter>Source Files\3. report</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3. report\src\summary.cpp">
+      <Filter>Source Files\3. report</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3. report\src\verbose.cpp">
+      <Filter>Source Files\3. report</Filter>
+    </ClCompile>
+    <ClCompile Include="..\0. utilities\src\constants.cpp">
+      <Filter>Source Files\0. utilities</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="fileusage.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\0. utilities\inc\helper.hpp">
+      <Filter>Header Files\0. utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\0. utilities\inc\system.hpp">
+      <Filter>Header Files\0. utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\1. arguments\inc\args.hpp">
+      <Filter>Header Files\1. arguments</Filter>
+    </ClInclude>
+    <ClInclude Include="..\1. arguments\inc\Argument.hpp">
+      <Filter>Header Files\1. arguments</Filter>
+    </ClInclude>
+    <ClInclude Include="..\2. scan\inc\Extension.hpp">
+      <Filter>Header Files\2. scan</Filter>
+    </ClInclude>
+    <ClInclude Include="..\2. scan\inc\ExtensionInfo.hpp">
+      <Filter>Header Files\2. scan</Filter>
+    </ClInclude>
+    <ClInclude Include="..\2. scan\inc\scan_directory.hpp">
+      <Filter>Header Files\2. scan</Filter>
+    </ClInclude>
+    <ClInclude Include="..\2. scan\inc\ThreadPool.hpp">
+      <Filter>Header Files\2. scan</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3. report\inc\benchmark.hpp">
+      <Filter>Header Files\3. report</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3. report\inc\summary.hpp">
+      <Filter>Header Files\3. report</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3. report\inc\verbose.hpp">
+      <Filter>Header Files\3. report</Filter>
+    </ClInclude>
+    <ClInclude Include="..\1. arguments\arguments.hpp">
+      <Filter>Header Files\fileusage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\0. utilities\utilities.hpp">
+      <Filter>Header Files\fileusage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\2. scan\scan.hpp">
+      <Filter>Header Files\fileusage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3. report\report.hpp">
+      <Filter>Header Files\fileusage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\0. utilities\inc\constants.hpp">
+      <Filter>Header Files\0. utilities</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\.gitignore" />
+    <None Include="..\README.md" />
+  </ItemGroup>
+</Project>
