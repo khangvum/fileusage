@@ -35,7 +35,7 @@ benchmark.cpp
 *.lib
 
 # Executables
-# *.exe		# .exe files for public use
+*.exe
 *.out
 *.app
 
@@ -87,7 +87,7 @@ mono_crash.*
 [Dd]ebugPublic/
 [Rr]elease/
 [Rr]eleases/
-# x64/		# Folder for public use
+x64/
 x86/
 [Ww][Ii][Nn]32/
 [Aa][Rr][Mm]/
