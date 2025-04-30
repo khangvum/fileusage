@@ -31,14 +31,16 @@
 #include "ExtensionInfo.hpp"
 #include <string>
 
-class Extension {
-	std::string extension_;
-	ExtensionInfo info_;
-public:
-	// Constructor
-	Extension(const std::string& extension = "", const ExtensionInfo& info = {}) : extension_{ extension }, info_{ info } {}
+namespace fileusage {
+	class Extension {
+		std::string extension_;
+		ExtensionInfo info_;
+	public:
+		// Constructor
+		Extension(const std::string& extension = "", const ExtensionInfo& info = {}) : extension_{ extension }, info_{ info } {}
 
-	// Accessors
-	inline std::string extension() const { return extension_; }
-	inline ExtensionInfo info() const { return info_; }
-};
+		// Accessors
+		inline std::string extension() const { return extension_; }
+		inline ExtensionInfo info() const { return info_; }
+	};
+}	// End of namespace fileusage 

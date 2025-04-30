@@ -31,16 +31,18 @@
 #include <iostream>
 using namespace std;
 
-void print_help() {
-	cout << "\tUsage: fileusage [--help] [-hdrsv(x regularexpression)] [folder]\n"s
-		<< "\tswitches:\n"s
-		<< "\t\th\thelp\n"s
-		<< "\t\td\treverse the order of listing\n"s
-		<< "\t\tr\tsuppress recursion\n"s
-		<< "\t\ts\tsort by file sizes\n"s
-		<< "\t\tv\tverbose\n"s
-		<< "\t\tb\tbenchmark\n"s
-		<< "\t\tx\tfilter with a regular expression\n\n"s
-		<< "\tfolder\n"s
-		<< "\t\tstarting folder or current folder if not specified\n"s;
-}
+namespace fileusage {
+	void print_help() {
+		cout << "\tUsage: fileusage [--help] [-hdrsv(x regularexpression)] [folder]\n"s
+			<< "\tswitches:\n"s
+			<< "\t\th\thelp\n"s
+			<< "\t\td\treverse the order of listing\n"s
+			<< "\t\tr\tsuppress recursion\n"s
+			<< "\t\ts\tsort by file sizes\n"s
+			<< "\t\tv\tverbose\n"s
+			<< "\t\tb\tbenchmark\n"s
+			<< "\t\tx\tfilter with a regular expression\n\n"s
+			<< "\tfolder\n"s
+			<< "\t\tstarting folder or current folder if not specified\n"s;
+	}
+}	// End of namespace fileusage

@@ -33,8 +33,10 @@
 #include <string>
 #include <deque>
 
-/*	\brief		Print the summary: File extensions, their counts, and sizes
-	\param		const std::deque<Extension>&	- The deque to store the file extensions
-				const Argument&					- The Argument object
-*/
-void print_summary(const std::deque<Extension>& ext_deque, const Argument& arguments);
+namespace fileusage {
+	/*	\brief		Print the summary: File extensions, their counts, and sizes
+		\param		const std::deque<Extension>&	- The deque to store the file extensions
+					const Argument&					- The Argument object
+	*/
+	void print_summary(const std::deque<Extension>& ext_deque, const Argument& arguments);
+}	// End of namespace fileusage

@@ -30,16 +30,18 @@
 #include "../inc/system.hpp"
 using namespace std;
 
-CONSOLE_SCREEN_BUFFER_INFO csbi{ 0 };
-UINT codepage{ GetConsoleOutputCP() };
-size_t horizontal_width{};
+namespace fileusage {
+	CONSOLE_SCREEN_BUFFER_INFO csbi{ 0 };
+	UINT codepage{ GetConsoleOutputCP() };
+	size_t horizontal_width{};
 
-// === 1. Color functions ======================================
-void save_color() { GetConsoleScreenBufferInfo(GetStdHandle(STD_OUTPUT_HANDLE), &csbi); }
+	// === 1. Color functions ======================================
+	void save_color() { GetConsoleScreenBufferInfo(GetStdHandle(STD_OUTPUT_HANDLE), &csbi); }
 
-void set_color(WORD attribute) { SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), attribute); }
+	void set_color(WORD attribute) { SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), attribute); }
 
-void restore_color() { set_color(csbi.wAttributes); }
+	void restore_color() { set_color(csbi.wAttributes); }
 
-// === 2. Codepage functions ===================================
-void restore_codepage() { SetConsoleOutputCP(codepage); }
+	// === 2. Codepage functions ===================================
+	void restore_codepage() { SetConsoleOutputCP(codepage); }
+}	// End of namespace fileusage

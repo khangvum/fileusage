@@ -29,6 +29,7 @@
 
 #include "fileusage.hpp"
 using namespace std;
+using namespace fileusage;
 
 int main(int argc, char* argv[])
 {

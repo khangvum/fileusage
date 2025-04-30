@@ -28,6 +28,8 @@
 
   ============================================================= */
 
-/*	\brief		Print the help message if there is a -h or --help switch
-*/
-void print_help();
+namespace fileusage {
+	/*	\brief		Print the help message if there is a -h or --help switch
+	*/
+	void print_help();
+}	// End of namespace fileusage

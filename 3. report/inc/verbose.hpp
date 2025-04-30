@@ -31,14 +31,16 @@
 #include "../../2. scan/inc/Extension.hpp"
 #include <deque>
 
-/*	\brief		Print the absolute path of the file
-	\param		const std::string&	- The path
-				std::streamsize		- The width of the count
-*/
-void print_path(const std::string& path, std::streamsize count_width);
+namespace fileusage {
+	/*	\brief		Print the absolute path of the file
+		\param		const std::string&	- The path
+					std::streamsize		- The width of the count
+	*/
+	void print_path(const std::string& path, std::streamsize count_width);
 
-/*	\brief		Print the verbose: File extensions, their counts, sizes, and absolute paths
-	\param		const std::deque<Extension>&	- The deque to store the file extensions
-				size_t							- The largest file extension count
-*/
-void print_verbose(const std::deque<Extension>& ext_deque, size_t largest_count);
+	/*	\brief		Print the verbose: File extensions, their counts, sizes, and absolute paths
+		\param		const std::deque<Extension>&	- The deque to store the file extensions
+					size_t							- The largest file extension count
+	*/
+	void print_verbose(const std::deque<Extension>& ext_deque, size_t largest_count);
+}	// End of namespace fileusage

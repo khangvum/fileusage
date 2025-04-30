@@ -32,18 +32,20 @@
 #include <chrono>
 using hour_clock = std::chrono::high_resolution_clock;
 
-extern long long elapsed_time;
+namespace fileusage {
+	extern long long elapsed_time;
 
-/*	\brief		Print the time
-	\param		const std::string& title	- The title
-				hour_clock::duration		- The time duration
-*/
-void print_time(const std::string& title, hour_clock::duration time);
+	/*	\brief		Print the time
+		\param		const std::string& title	- The title
+					hour_clock::duration		- The time duration
+	*/
+	void print_time(const std::string& title, hour_clock::duration time);
 
-/*	\brief		Print the interval time
-	\param		hour_clock::time_point	- The start time
-				hour_clock::time_point	- The time after scanning
-				hour_clock::time_point	- The time after sorting
-				hour_clock::time_point	- The stop time
- */
-void print_interval_times(hour_clock::time_point start, hour_clock::time_point after_scan, hour_clock::time_point after_sort, hour_clock::time_point stop);
+	/*	\brief		Print the interval time
+		\param		hour_clock::time_point	- The start time
+					hour_clock::time_point	- The time after scanning
+					hour_clock::time_point	- The time after sorting
+					hour_clock::time_point	- The stop time
+	 */
+	void print_interval_times(hour_clock::time_point start, hour_clock::time_point after_scan, hour_clock::time_point after_sort, hour_clock::time_point stop);
+}	// End of namespace fileusage

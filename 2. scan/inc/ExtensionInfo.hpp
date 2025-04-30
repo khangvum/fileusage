@@ -31,21 +31,23 @@
 #include <iostream>
 #include <vector>
 
-class ExtensionInfo {
-	size_t count_;
-	std::streamsize size_;
-	std::vector<std::string> paths_;
-public:
-	// Constructor
-	ExtensionInfo(size_t count = 0, std::streamsize size = 0, std::vector<std::string> paths = {}) : count_(count), size_(size), paths_(paths) {}
+namespace fileusage {
+	class ExtensionInfo {
+		size_t count_;
+		std::streamsize size_;
+		std::vector<std::string> paths_;
+	public:
+		// Constructor
+		ExtensionInfo(size_t count = 0, std::streamsize size = 0, std::vector<std::string> paths = {}) : count_(count), size_(size), paths_(paths) {}
 
-	// Accessors
-	constexpr inline size_t count() const { return count_; }
-	constexpr inline std::streamsize size() const { return size_; }
-	inline std::vector<std::string> paths() const { return paths_; }
+		// Accessors
+		constexpr inline size_t count() const { return count_; }
+		constexpr inline std::streamsize size() const { return size_; }
+		inline std::vector<std::string> paths() const { return paths_; }
 
-	// Mutators
-	constexpr inline void add_count(size_t count) { count_ += count; }
-	constexpr inline void add_size(std::streamsize size) { size_ += size; }
-	inline void add_path(const std::string& path) { paths_.emplace_back(path); }
-};
+		// Mutators
+		constexpr inline void add_count(size_t count) { count_ += count; }
+		constexpr inline void add_size(std::streamsize size) { size_ += size; }
+		inline void add_path(const std::string& path) { paths_.emplace_back(path); }
+	};
+}	// End of namespace fileusage
