@@ -1,6 +1,6 @@
 # File Usage
 
-A Windows console application that lists **_file usage_** by grouping files based on **_their extensions_**. It counts the **_total_** number of files and calculates their cumulative **_sizes_**.
+A Windows console application that lists **_file usage_** by grouping files based on **_their extensions_**. This program counts the **_total_** number of files and calculates their cumulative **_sizes_**.
 
 ## Features
 
