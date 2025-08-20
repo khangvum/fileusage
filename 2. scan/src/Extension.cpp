@@ -1,8 +1,8 @@
 /*! \file	    Extension.cpp
 	\brief	    Extension class definition
-	\author	    Khang Vu
+	\author	    Manh Khang Vu
 	\date	    2024-12-03
-	\copyright	Khang Vu
+	\copyright	Manh Khang Vu
 
   =============================================================
   Revision History
@@ -23,7 +23,7 @@
 
   =============================================================
 
-  Copyright Khang Vu
+  Copyright Manh Khang Vu
 
   ============================================================= */
 #include "../inc/Extension.hpp"

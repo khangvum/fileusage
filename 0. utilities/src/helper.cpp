@@ -1,8 +1,8 @@
 /*! \file	    helper.cpp
 	\brief	    Helper utilities
-	\author	    Khang Vu
+	\author	    Manh Khang Vu
 	\date	    2024-12-03
-	\copyright	Khang Vu
+	\copyright	Manh Khang Vu
 
   =============================================================
   Revision History
@@ -23,7 +23,7 @@
 
   =============================================================
 
-  Copyright Khang Vu
+  Copyright Manh Khang Vu
 
   ============================================================= */
 
@@ -43,7 +43,7 @@ namespace fileusage {
 		atexit(restore_codepage);
 
 		set_color(INVERSE_GREY);
-		cout << " fileusage 1.0.0 "s << copyright << "2024-2025, Khang Vu "s;
+		cout << " fileusage 1.0.0 "s << copyright << "2024-2025, Manh Khang Vu "s;
 		set_color(WHITE); cout << "\n\n";
 	}
 
