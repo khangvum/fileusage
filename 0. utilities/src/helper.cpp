@@ -43,7 +43,7 @@ namespace fileusage {
 		atexit(restore_codepage);
 
 		set_color(INVERSE_GREY);
-		cout << " fileusage 1.0.0 "s << copyright << "2024-2025, Manh Khang Vu "s;
+		cout << " fileusage 1.0.1 "s << copyright << "2024-2026, Manh Khang Vu "s;
 		set_color(WHITE); cout << "\n\n";
 	}
 
