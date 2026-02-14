@@ -163,10 +163,14 @@
     <ClInclude Include="..\3. report\inc\verbose.hpp" />
     <ClInclude Include="..\3. report\report.hpp" />
     <ClInclude Include="fileusage.hpp" />
+    <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\.gitignore" />
     <None Include="..\README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="fileusage.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
