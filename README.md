@@ -2,6 +2,8 @@
 
 A Windows console application that lists **_file usage_** by grouping files based on **_their extensions_**. This program counts the **_total_** number of files and calculates their cumulative **_sizes_**.
 
+[![Security Scan](https://github.com/khangvum/fileusage/actions/workflows/security.yml/badge.svg)](https://github.com/khangvum/fileusage/actions/workflows/security.yml)
+
 ## Features
 
 -   Lists **_files in a directory_** and **_groups them by their file extensions_**.
