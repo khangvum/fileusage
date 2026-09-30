@@ -23,7 +23,7 @@ jobs:
 
       - name: Build Release x64
         run: >
-          msbuild fileusage/fileusage.vcxproj
+          msbuild fileusage.slnx
           /p:Configuration=Release
           /p:Platform=x64
           /m
