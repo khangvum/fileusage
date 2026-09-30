@@ -1,4 +1,4 @@
-name: Release Build
+name: C++ Release Build
 
 on:
   push:
@@ -9,56 +9,7 @@ on:
       - main
 
 jobs:
-  build-release:
-    runs-on: windows-latest
-    permissions:
-      contents: read
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v7
-
-      - name: Set up MSBuild
-        uses: microsoft/setup-msbuild@v3
-
-      - name: Build Release x64
-        run: >
-          msbuild fileusage.slnx
-          /p:Configuration=Release
-          /p:Platform=x64
-          /m
-
-      - name: Rename Executable
-        if: startsWith(github.ref, 'refs/tags/v')
-        shell: pwsh
-        run: |
-          Copy-Item `
-            "x64/Release/fileusage.exe" `
-            "fileusage-${{ github.ref_name }}.exe"
-
-      - name: Upload Release Executable
-        if: startsWith(github.ref, 'refs/tags/v')
-        uses: actions/upload-artifact@v7
-        with:
-          name: release-executable
-          path: fileusage-${{ github.ref_name }}.exe
-
-  publish-release:
-    if: startsWith(github.ref, 'refs/tags/v')
-    needs: build-release
-    runs-on: windows-latest
-    permissions:
-      contents: write
-
-    steps:
-      - name: Download Release Executable
-        uses: actions/download-artifact@v8
-        with:
-          name: release-executable
-
-      - name: Create Release and Upload Executable
-        uses: softprops/action-gh-release@v3
-        with:
-          tag_name: ${{ github.ref_name }}
-          generate_release_notes: true
-          files: fileusage-${{ github.ref_name }}.exe
+  release:
+    uses: khangvum/workflows/.github/workflows/cpp-release.yml@main
+    with:
+      app_name: fileusage
