@@ -1,11 +1,4 @@
 ### C++ ###
-## 1. User-defined files
-scan_directory.cpp
-ThreadPool.hpp
-ThreadPool.cpp
-benchmark.cpp
-
-## 2. System files
 # Prerequisites
 *.d
 
@@ -439,7 +432,7 @@ MigrationBackup/
 FodyWeavers.xsd
 
 # VS Code files for those working on multiple tools
-.vscode/*
+.vscode/
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
@@ -453,7 +446,3 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
-
-### VisualStudio Patch ###
-# Additional files built by Visual Studio
-/2. scan/inc/ThreadPool.hpp
