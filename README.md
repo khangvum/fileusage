@@ -56,15 +56,3 @@ switches:
 folder
         starting folder or current folder if not specified
 ```
-
-<!-- </pre> -->
-
-## Ignored Files
-
-The following files are **_intentionally excluded_** from the repository:
-
--   scan_directory.cpp
--   ThreadPool.hpp/ThreadPool.cpp
--   benchmark.cpp
-
-These files are excluded for **_personal_** and **_copyright_** reasons. If you need these files, please contact me via my email: [manhkhang0305@gmail.com](mailto:manhkhang0305@gmail.com)
