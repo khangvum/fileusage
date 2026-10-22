@@ -9,6 +9,9 @@
   Revision History
   -------------------------------------------------------------
 
+  Version 2026.10.22
+	  Added singleton pattern to application
+
   Version 2024.12.03
 	  Directory hierarchy cleanup
 	  Separated system, constants, and helper utilities
@@ -28,9 +31,11 @@
 
   ============================================================= */
 
+#if defined(_WIN32)
 #include <Windows.h>
 #undef min		// Remove <Windows.h> terrible min & max MACRO
 #undef max
+#endif
 
 namespace fileusage {
 	extern CONSOLE_SCREEN_BUFFER_INFO csbi;

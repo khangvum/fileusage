@@ -9,6 +9,9 @@
   Revision History
   -------------------------------------------------------------
 
+  Version 2026.10.22
+	  Added singleton pattern to application
+
   Version 2024.12.03
 	  Directory hierarchy cleanup
 	  Separated system, constants, and helper utilities
@@ -28,7 +31,9 @@
 
   ============================================================= */
 
+#if defined(_WIN32)
 #include <Windows.h>
+#endif
 
 namespace fileusage {
 	// === 1. Color constants ======================================

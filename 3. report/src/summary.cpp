@@ -8,6 +8,9 @@
   Revision History
   -------------------------------------------------------------
 
+  Version 2026.10.22
+	  Added singleton pattern to application
+
   Version 2024.12.03
 	  Directory hierarchy cleanup
 	  Separated system, constants, and helper utilities
@@ -30,8 +33,7 @@
 #include "../inc/summary.hpp"
 #include "../inc/verbose.hpp"		
 #include "../../0. utilities/utilities.hpp"
-#include <iostream>
-#include <iomanip>
+#include <print>
 #include <algorithm>
 using namespace std;
 
@@ -56,28 +58,26 @@ namespace fileusage {
 
 		// Print the header
 		print_header("Summary");
-		cout << " " << setw(ext_width) << "Extension" << bar
-			<< setw(count_width) << "#" << bar
-			<< setw(size_width) << "Size" << "\n";
-		cout << " " << horizontal_line << "\n";
+		print(" {:>{}}{}{:>{}}{}{:>{}}\n", "Extension", ext_width, bar, "#", count_width, bar, "Size", size_width);
+		print(" {}\n", horizontal_line);
 
 		// Print the extensions' information
 		for (const auto& ext : ext_deque) {
-			set_color(CYAN); cout << " " << setw(ext_width) << ext.extension();
-			set_color(WHITE); cout << bar;
-			set_color(CYAN); cout << setw(count_width) << format_number(ext.info().count());
-			set_color(WHITE); cout << bar;
-			set_color(CYAN); cout << setw(size_width) << format_number(ext.info().size());
-			set_color(WHITE); cout << "\n";
-		}
+			set_color(CYAN); print(" {:>{}}", ext.extension(), ext_width);
+			set_color(WHITE); print("{}", bar);
+			set_color(CYAN); print("{:>{}}", format_number(ext.info().count()), count_width);
+			set_color(WHITE); print("{}", bar);
+			set_color(CYAN); print("{:>{}}", format_number(ext.info().size()), size_width);
+            set_color(WHITE); print("\n");
+        }
 
 		// Print the total
-		cout << " " << horizontal_line << "\n";
-		set_color(GREEN); cout << " " << setw(ext_width) << format_number(ext_deque.size());
-		set_color(WHITE); cout << bar;
-		set_color(GREEN); cout << setw(count_width) << format_number(total_counts);
-		set_color(WHITE); cout << bar;
-		set_color(GREEN); cout << setw(size_width) << format_number(total_sizes);
-		set_color(WHITE); cout << "\n\n";
-	}
+		print(" {}\n", horizontal_line);
+		set_color(GREEN); print(" {:>{}}", format_number(ext_deque.size()), ext_width);
+		set_color(WHITE); print("{}", bar);
+		set_color(GREEN); print("{:>{}}", format_number(total_counts), count_width);
+		set_color(WHITE); print("{}", bar);
+		set_color(GREEN); print("{:>{}}", format_number(total_sizes), size_width);
+        set_color(WHITE); print("\n\n");
+    }
 }	// End of namespace fileusage

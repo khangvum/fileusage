@@ -8,6 +8,9 @@
   Revision History
   -------------------------------------------------------------
 
+  Version 2026.10.22
+	  Added singleton pattern to application
+
   Version 2024.12.03
 	  Directory hierarchy cleanup
 	  Separated system, constants, and helper utilities
@@ -29,8 +32,7 @@
 
 #include "../inc/verbose.hpp"
 #include "../../0. utilities/utilities.hpp"		
-#include <iostream>
-#include <iomanip>
+#include <print>
 #include <cmath>
 #include <algorithm>
 using namespace std;
@@ -59,9 +61,9 @@ namespace fileusage {
 			}
 
 			if (begin != 0)
-				cout << " " << setw(count_width) << "" << bar;
+				print(" {:>{}}{}", "", count_width, bar);
 
-			cout << setw(5) << "" << path.substr(begin, end - begin) << "\n";
+			print("{:>{}}{}\n", "", 5, path.substr(begin, end - begin));
 			begin = end;
 		}
 	}
@@ -76,13 +78,13 @@ namespace fileusage {
 
 		// Print the extensions' directories
 		for (const auto& ext : ext_deque) {
-			set_color(GREEN); cout << " " << ext.extension();
-			set_color(WHITE); cout << " (";
-			set_color(CYAN); cout << format_number(ext.info().count());
-			set_color(WHITE); cout << " files - ";
-			set_color(CYAN); cout << format_number(ext.info().size());
-			set_color(WHITE); cout << " bytes)\n";
-			cout << " " << horizontal_line << "\n";
+			set_color(GREEN); print(" {}", ext.extension());
+			set_color(WHITE); print(" (");
+			set_color(CYAN); print("{}", format_number(ext.info().count()));
+			set_color(WHITE); print(" files - ");
+			set_color(CYAN); print("{}", format_number(ext.info().size()));
+			set_color(WHITE); print(" bytes)\n");
+			print(" {}\n", horizontal_line);
 
 			// Print a sample of the directories only
 			const size_t count{ ext.info().paths().size() };
@@ -94,29 +96,29 @@ namespace fileusage {
 			// Print the front of the list
 			deque<Extension>::size_type i{ 0 };
 			for (; i < low_count; ++i) {
-				set_color(YELLOW); cout << " " << setw(count_width) << format_number(i + 1);
-				set_color(WHITE); cout << bar;
+				set_color(YELLOW); print(" {:>{}}", format_number(i + 1), count_width);
+				set_color(WHITE); print("{}", bar);
 				print_path(ext.info().paths().at(i), count_width);
 			}
 
 			// Skip the middle of the list if it is too large
 			if (i < high_count) {
-				cout << " " << setw(count_width) << "" << bar << "\n";
-				set_color(YELLOW); cout << " " << setw(count_width) << "...";
-				set_color(WHITE); cout << setw(6) << left << bar << right;
-				set_color(YELLOW); cout << "...";
-				set_color(WHITE); cout << "\n";
-				cout << " " << setw(count_width) << "" << bar << "\n";
+				print(" {:>{}}{}\n", "", count_width, bar);
+				set_color(YELLOW); print(" {:>{}}", "...", count_width);
+				set_color(WHITE); print("{:<6}", bar);
+				set_color(YELLOW); print("...");
+				set_color(WHITE); print("\n");
+				print(" {:>{}}{}\n", "", count_width, bar);
 				i = high_count;
 			}
 
 			// Print the back of the list
 			for (; i < count; ++i) {
-				set_color(YELLOW); cout << " " << setw(count_width) << format_number(i + 1);
-				set_color(WHITE); cout << bar;
+				set_color(YELLOW); print(" {:>{}}", format_number(i + 1), count_width);
+				set_color(WHITE); print("{}", bar);
 				print_path(ext.info().paths().at(i), count_width);
 			}
-			cout << "\n";
+			print("\n");
 		}
 	}
 }	// End of namespace fileusage
