@@ -28,7 +28,9 @@
 
   ============================================================= */
 
+#if defined(_WIN32)
 #include <Windows.h>
+#endif
 
 namespace fileusage {
 	// === 1. Color constants ======================================

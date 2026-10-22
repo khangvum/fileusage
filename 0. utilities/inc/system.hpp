@@ -28,9 +28,11 @@
 
   ============================================================= */
 
+#if defined(_WIN32)
 #include <Windows.h>
 #undef min		// Remove <Windows.h> terrible min & max MACRO
 #undef max
+#endif
 
 namespace fileusage {
 	extern CONSOLE_SCREEN_BUFFER_INFO csbi;
