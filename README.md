@@ -32,13 +32,13 @@ For **_efficient_** and **_modern file management_**, the program utilizes the `
 
 ## Performance Optimization with Thread Pooling
 
-To improve the program's performance, a custom `ThreadPool` is used for **_concurrent execution_**. By utilizing **_multiple threads_**, the program can efficiently **_process files in parallel_**, significantly reducing execution time, especially when dealing with large directories containing numerous files (_e.g._ `C:\`).
+To improve the program's performance, a custom `ThreadPool` is used for **_concurrent execution_**. Directory enumeration and file metadata reads run in parallel, while each directory aggregates its results locally before one synchronized merge. This avoids lock contention for every file and keeps the scan safe when recursive tasks submit more work.
 
 -   **Parallel Task Execution:** The `ThreadPool` manages **_a pool of worker threads_** that handle tasks concurrently, ensuring **_faster file scanning_**.
--   **Efficient Resource Utilization:** The number of threads is determined based on the **_hardware's logical processors_**, maximizing CPU utilization without overwhelming the system.
+-   **Efficient Resource Utilization:** The number of threads is determined from the hardware's logical processors, with a minimum of one worker so scanning still works when the operating system cannot report the count.
 
     ```cpp
-    size_t num_threads{ thread::hardware_concurrency() };
+    size_t num_threads{ max<size_t>(1, thread::hardware_concurrency()) };
     ```
 
 ## Usage
