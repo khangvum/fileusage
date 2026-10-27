@@ -81,6 +81,9 @@
     <ClCompile Include="..\0. utilities\src\constants.cpp">
       <Filter>Source Files\0. utilities</Filter>
     </ClCompile>
+    <ClCompile Include="ConsoleApp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="fileusage.hpp">
@@ -135,6 +138,9 @@
       <Filter>Header Files\0. utilities</Filter>
     </ClInclude>
     <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ConsoleApp.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
