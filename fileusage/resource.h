@@ -2,6 +2,13 @@
 // Microsoft Visual C++ generated include file.
 // Used by fileusage.rc
 
+// =============================================================
+// Revision History
+// -------------------------------------------------------------
+
+// Version 2026.10.22
+// Added singleton pattern to application
+
 // Next default values for new objects
 // 
 #ifdef APSTUDIO_INVOKED
