@@ -55,9 +55,9 @@ namespace fileusage {
 		}
 
 		// Else, begin the program by printing the folder path
-		set_color(INVERSE_RED); cout << " Folder: ";
-		set_color(RED); cout << " " << arguments.dir_path();
-		set_color(WHITE); cout << "\n\n";
+		set_color(INVERSE_RED); print(" Folder: ");
+		set_color(RED); print(" {}", arguments.dir_path());
+		set_color(WHITE); print("\n\n");
 
 		// === 1. Start time ===========================================
 		auto start{ hour_clock::now() };
@@ -115,7 +115,7 @@ namespace fileusage {
 							break;
 						}
 						else {
-							print(cerr, "Error: -x switch used without regular expression argument provided.\n");
+							print(stderr, "Error: -x switch used without regular expression argument provided.\n");
 							exit(EXIT_FAILURE);
 						}
 					}
@@ -128,11 +128,11 @@ namespace fileusage {
 		}
 
 		if (args_it != end(args_deque) && !arguments.help()) {
-			cerr << "Error: Too many commandline arguments: "s << *args_it << "...\n";
+			print(stderr, "Error: Too many commandline arguments: {}...\n", *args_it);
 			exit(EXIT_FAILURE);
 		}
 		else if (!filesystem::is_directory(arguments.dir_path())) {
-			cerr << "Error: The system cannot find the canonical file specified: \""s << arguments.dir_path() << "\"\n";
+			print(stderr, "Error: The system cannot find the canonical file specified: \"{}\"\n", arguments.dir_path());
 			exit(EXIT_FAILURE);
 		}
 

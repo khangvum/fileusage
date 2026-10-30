@@ -32,8 +32,7 @@
 
 #include "../inc/benchmark.hpp"
 #include "../../0. utilities/utilities.hpp"
-#include <iostream>
-#include <iomanip>
+#include <print>
 using namespace std;
 
 namespace fileusage {
@@ -41,12 +40,11 @@ namespace fileusage {
 
 	void print_time(const string& title, hour_clock::duration time) {
 		auto nano_seconds{ chrono::duration_cast<chrono::nanoseconds>(time).count() };
-		cout << " " << setw(12) << title << ": ";
-		set_color(YELLOW); cout << setw(format_number(elapsed_time).size()) << format_number(nano_seconds);
-		set_color(WHITE); cout << " ns -> ";
-		cout << setprecision(2) << fixed;
-		set_color(YELLOW); cout << setw(format_number(elapsed_time / 1.0E9, 2).size()) << format_number(nano_seconds / 1.0E9, 2);
-		set_color(WHITE); cout << " s.\n";
+		print(" {:>{}}: ", title, 12);
+		set_color(YELLOW); print("{:>{}}", format_number(nano_seconds), format_number(elapsed_time).size());
+		set_color(WHITE); print(" ns -> ");
+		set_color(YELLOW); print("{:>{}}", format_number(nano_seconds / 1.0E9, 2), format_number(elapsed_time / 1.0E9, 2).size());
+		set_color(WHITE); print(" s.\n");
 	}
 
 	void print_interval_times(hour_clock::time_point start, hour_clock::time_point after_scan, hour_clock::time_point after_sort, hour_clock::time_point stop) {

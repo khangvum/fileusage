@@ -32,7 +32,6 @@
 
 #include "../inc/scan_directory.hpp"
 #include "../inc/ThreadPool.hpp"
-#include <iostream>
 #include <map>
 #include <regex>
 #include <filesystem>

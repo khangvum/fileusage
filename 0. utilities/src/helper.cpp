@@ -33,6 +33,7 @@
 #include "../inc/constants.hpp"
 #include "../inc/helper.hpp"
 #include "../inc/system.hpp"
+#include <print>
 using namespace std;
 
 namespace fileusage {
@@ -46,13 +47,13 @@ namespace fileusage {
 		atexit(restore_codepage);
 
 		set_color(INVERSE_GREY);
-		cout << " fileusage 1.1.0 "s << copyright << "2024-2026, Manh Khang Vu "s;
-		set_color(WHITE); cout << "\n\n";
+		print(" fileusage 1.1.0 {}2024-2026, Manh Khang Vu ", copyright);
+		set_color(WHITE); print("\n\n");
 	}
 
 	void print_header(const string& title) {
-		set_color(INVERSE_WHITE); cout << " " << setw(horizontal_width) << left << title << right;
-		set_color(WHITE); cout << "\n\n";
+		set_color(INVERSE_WHITE); print(" {:<{}}", title, horizontal_width);
+		set_color(WHITE); print("\n\n");
 	}
 
 	void find_maxima(const deque<Extension>& ext_deque, streamsize& ext_width, streamsize& count_width, streamsize& size_width, size_t& total_counts, streamsize& total_sizes, size_t& largest_count) {
