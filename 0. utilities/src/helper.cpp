@@ -47,7 +47,7 @@ namespace fileusage {
 		atexit(restore_codepage);
 
 		set_color(INVERSE_GREY);
-		print(" fileusage 1.1.0 {}2024-2026, Manh Khang Vu ", copyright);
+		print(" fileusage 1.2.0 {}2024-2026, Manh Khang Vu ", copyright);
 		set_color(WHITE); print("\n\n");
 	}
 
