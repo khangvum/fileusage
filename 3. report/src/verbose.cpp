@@ -8,6 +8,10 @@
   Revision History
   -------------------------------------------------------------
 
+  Version 2026.10.23
+	  Updated to C++23
+	  Improved ThreadPool synchronization
+
   Version 2026.10.22
 	  Added singleton pattern to application
 
