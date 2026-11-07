@@ -1,6 +1,6 @@
 #pragma once
-/*! \file	    Argument.hpp
-	\brief	    Argument class declaration
+/*! \file	    Arguments.hpp
+	\brief	    Arguments class declaration
 	\author	    Manh Khang Vu
 	\date	    2024-12-03
 	\copyright	Manh Khang Vu
@@ -50,10 +50,10 @@ public: \
 	constexpr inline void name(type value) { name##_ = std::move(value); }
 
 namespace fileusage {
-	/*! \class	    Argument
+	/*! \class	    Arguments
 		\brief	    Command line argument class
 	*/
-	class Argument {
+	class Arguments {
 		// Properties (each macro leaves the following members public)
 		FILEUSAGE_PROPERTY(bool, help)
 		FILEUSAGE_PROPERTY(bool, reverse)
@@ -66,7 +66,7 @@ namespace fileusage {
 		FILEUSAGE_PROPERTY(std::string, dir_path)
 	public:
 		// Constructor
-		Argument(bool h = false, bool d = false, bool r = false, bool s = false, bool v = false, bool b = false, bool x = false, const std::string& regex_pattern = "", const std::string& dir_path = std::filesystem::current_path().string())
+        Arguments(bool h = false, bool d = false, bool r = false, bool s = false, bool v = false, bool b = false, bool x = false, const std::string& regex_pattern = "", const std::string& dir_path = std::filesystem::current_path().string())
 			: help_{ h }, reverse_{ r }, suppress_recursive_{ d }, sort_by_size_{ s }, verbose_{ v }, benchmark_{ b }, regex_{ x }, regex_pattern_{ regex_pattern }, dir_path_{ dir_path } {}
 	};
 }	// End of namespace fileusage

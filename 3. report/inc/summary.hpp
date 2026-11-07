@@ -36,14 +36,14 @@
   ============================================================= */
 
 #include "../../2. scan/inc/Extension.hpp"
-#include "../../1. arguments/inc/Argument.hpp"
+#include "../../1. arguments/inc/Arguments.hpp"
 #include <string>
 #include <deque>
 
 namespace fileusage {
 	/*	\brief		Print the summary: File extensions, their counts, and sizes
 		\param		const std::deque<Extension>&	- The deque to store the file extensions
-					const Argument&					- The Argument object
+					const Arguments&				- The Arguments object
 	*/
-	void print_summary(const std::deque<Extension>& ext_deque, const Argument& arguments);
+	void print_summary(const std::deque<Extension>& ext_deque, const Arguments& arguments);
 }	// End of namespace fileusage

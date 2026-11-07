@@ -35,5 +35,5 @@
 
   ============================================================= */
 
-#include "inc/Argument.hpp"
+#include "inc/Arguments.hpp"
 #include "inc/args.hpp"

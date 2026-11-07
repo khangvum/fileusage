@@ -42,7 +42,7 @@
 using namespace std;
 
 namespace fileusage {
-	void print_summary(const deque<Extension>& ext_deque, const Argument& arguments) {
+	void print_summary(const deque<Extension>& ext_deque, const Arguments& arguments) {
 		// Calculate the widths of the columns, the total counts & sizes
 		// and fin the largest count
 		streamsize ext_width{ 0 }, count_width{ 0 }, size_width{ 0 };

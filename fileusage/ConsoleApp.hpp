@@ -68,12 +68,14 @@ namespace fileusage {
 		inline CommandLineArgs const& args() const { return args_; }
 
 		// Methods
+        /*! \brief  Executes the application
+            \return An integer representing the exit status of the application
+        */
 		virtual int execute() = 0;
 
-		/*!	\brief	Parses the command line arguments.
-			\return	A string containing the parsed arguments.
+		/*!	\brief	Parses the command line arguments
 		*/
-		[[nodiscard]] virtual Argument parse_arguments() = 0;
+		virtual void parse_arguments() = 0;
 	};
 
 	/*! \def	    MAKEAPP(name)
@@ -83,8 +85,9 @@ namespace fileusage {
 #define MAKEAPP(name)							\
     class name : public ConsoleApp				\
     {											\
+        Arguments arguments_;					\
         int execute() override;					\
-        Argument parse_arguments() override;	\
+        void parse_arguments() override;    	\
     } name##_g;									\
     int name::execute()
 }	// End of namespace fileusage
