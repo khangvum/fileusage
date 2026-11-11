@@ -43,7 +43,7 @@
 using namespace std;
 
 namespace fileusage {
-    void scan_directory(deque<Extension>& ext_deque, const Argument& arguments) {
+    void scan_directory(deque<Extension>& ext_deque, const Arguments& arguments) {
         // Create a map to store the extensions and their information
         map<string, ExtensionInfo> ext_map;
 
@@ -112,7 +112,7 @@ namespace fileusage {
             ext_deque.emplace_back(ext.first, ext.second);
     }
 
-    void sort_deque(deque<Extension>& ext_deque, const Argument& arguments) {
+    void sort_deque(deque<Extension>& ext_deque, const Arguments& arguments) {
         if (arguments.sort_by_size()) {
             sort(begin(ext_deque), end(ext_deque), [](const Extension& lhs, const Extension& rhs) {
                 return lhs.info().size() < rhs.info().size();

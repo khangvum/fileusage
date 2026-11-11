@@ -42,13 +42,13 @@
 namespace fileusage {
 	/*	\brief		Scan through the file directory
 		\param		std::deque<Extension>&	- The deque to store the file extensions
-				   Argument&				- The argument object
+				   Arguments&				- The arguments object
 	*/
-	void scan_directory(std::deque<Extension>& ext_deque, const Argument& arguments);
+	void scan_directory(std::deque<Extension>& ext_deque, const Arguments& arguments);
 
 	/*	\brief		Sort the Extension deque based on the arguments
 		\param		std::deque<Extension>&	- The deque to store the file extensions
-					Argument&				- The argument object
+					Arguments&				- The arguments object
 	*/
-	void sort_deque(std::deque<Extension>& ext_deque, const Argument& arguments);
+	void sort_deque(std::deque<Extension>& ext_deque, const Arguments& arguments);
 }	// End of namespace fileusage

@@ -1,5 +1,5 @@
-/*! \file	    Argument.cpp
-	\brief	    Argument class definition
+/*! \file	    Arguments.cpp
+	\brief	    Arguments class definition
 	\author	    Manh Khang Vu
 	\date	    2024-12-03
 	\copyright	Manh Khang Vu
@@ -34,5 +34,5 @@
 
   ============================================================= */
 
-#include "../inc/Argument.hpp"
+#include "../inc/Arguments.hpp"
 using namespace std;

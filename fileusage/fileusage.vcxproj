@@ -135,7 +135,7 @@
     <ClCompile Include="..\0. utilities\src\helper.cpp" />
     <ClCompile Include="..\0. utilities\src\system.cpp" />
     <ClCompile Include="..\1. arguments\src\args.cpp" />
-    <ClCompile Include="..\1. arguments\src\Argument.cpp" />
+    <ClCompile Include="..\1. arguments\src\Arguments.cpp" />
     <ClCompile Include="..\2. scan\src\Extension.cpp" />
     <ClCompile Include="..\2. scan\src\ExtensionInfo.cpp" />
     <ClCompile Include="..\2. scan\src\scan_directory.cpp" />
@@ -153,7 +153,7 @@
     <ClInclude Include="..\0. utilities\utilities.hpp" />
     <ClInclude Include="..\1. arguments\arguments.hpp" />
     <ClInclude Include="..\1. arguments\inc\args.hpp" />
-    <ClInclude Include="..\1. arguments\inc\Argument.hpp" />
+    <ClInclude Include="..\1. arguments\inc\Arguments.hpp" />
     <ClInclude Include="..\2. scan\inc\Extension.hpp" />
     <ClInclude Include="..\2. scan\inc\ExtensionInfo.hpp" />
     <ClInclude Include="..\2. scan\inc\scan_directory.hpp" />
